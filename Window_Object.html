@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object Example</title>
+
+    <script>
+
+        function showWindowInfo() {
+
+            document.getElementById("height").innerHTML =
+                "Window Inner Height: " + window.innerHeight;
+
+            document.getElementById("width").innerHTML =
+                "Window Inner Width: " + window.innerWidth;
+
+            document.getElementById("location").innerHTML =
+                "Current URL: " + window.location.href;
+        }
+
+        function showAlert() {
+            window.alert("This is an Alert Box!");
+        }
+
+        function showConfirm() {
+            var result = window.confirm("Do you want to continue?");
+            document.getElementById("confirmResult").innerHTML =
+                "Confirm Result: " + result;
+        }
+
+        function showPrompt() {
+            var name = window.prompt("Enter your name:");
+            document.getElementById("promptResult").innerHTML =
+                "Hello " + name;
+        }
+
+    </script>
+</head>
+
+<body onload="showWindowInfo()">
+
+    <h2>Window Object Properties & Methods</h2>
+
+    <p id="height"></p>
+    <p id="width"></p>
+    <p id="location"></p>
+
+    <br>
+
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="showConfirm()">Confirm</button>
+    <button onclick="showPrompt()">Prompt</button>
+
+    <p id="confirmResult"></p>
+    <p id="promptResult"></p>
+
+</body>
+</html>
