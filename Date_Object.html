@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object Example</title>
+
+    <script>
+
+        function dateExample() {
+
+            var today = new Date();
+
+            var output = "<h3>Date Object Properties & Methods</h3>";
+
+            output += "Current Date & Time: " + today + "<br><br>";
+
+            output += "Year: " + today.getFullYear() + "<br>";
+            output += "Month (0-11): " + today.getMonth() + "<br>";
+            output += "Date: " + today.getDate() + "<br>";
+            output += "Day (0-6): " + today.getDay() + "<br>";
+            output += "Hours: " + today.getHours() + "<br>";
+            output += "Minutes: " + today.getMinutes() + "<br>";
+            output += "Seconds: " + today.getSeconds() + "<br><br>";
+
+            today.setFullYear(2030);
+            output += "After Changing Year: " + today + "<br>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+
+    </script>
+</head>
+
+<body onload="dateExample()">
+
+    <h2>Date Object Properties & Methods</h2>
+
+    <p id="result"></p>
+
+</body>
+</html>

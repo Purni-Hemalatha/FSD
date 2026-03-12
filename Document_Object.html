@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Example</title>
+
+    <script>
+        function showProperties() {
+
+            document.getElementById("title").innerHTML =
+                "Title of Page: " + document.title;
+
+            document.getElementById("url").innerHTML =
+                "Page URL: " + document.URL;
+
+            document.getElementById("lastModified").innerHTML =
+                "Last Modified: " + document.lastModified;
+
+            document.bgColor = "lightyellow";
+        }
+
+        function changeText() {
+            document.getElementById("message").innerHTML =
+                "Text changed using document method!";
+        }
+
+    </script>
+</head>
+
+<body onload="showProperties()">
+
+    <h2>Using Document Object Properties & Methods</h2>
+
+    <p id="title"></p>
+    <p id="url"></p>
+    <p id="lastModified"></p>
+
+    <p id="message">Original Text</p>
+
+    <button onclick="changeText()">Click Me</button>
+
+</body>
+</html>

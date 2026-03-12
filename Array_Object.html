@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object Example</title>
+
+    <script>
+
+        function arrayExample() {
+
+            var subjects = ["Maths", "Physics", "Chemistry"];
+
+            var output = "<h3>Original Array:</h3>";
+            output += subjects + "<br><br>";
+            output += "Length of Array: " + subjects.length + "<br><br>";
+            subjects.push("English");
+            output += "After push(): " + subjects + "<br><br>";
+            subjects.pop();
+            output += "After pop(): " + subjects + "<br><br>";
+            subjects.sort();
+            output += "After sort(): " + subjects + "<br><br>";
+            subjects.reverse();
+            output += "After reverse(): " + subjects + "<br><br>";
+            output += "After join(): " + subjects.join(" | ") + "<br><br>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+
+    </script>
+</head>
+
+<body onload="arrayExample()">
+
+    <h2>Array Object Properties & Methods</h2>
+
+    <p id="result"></p>
+
+</body>
+</html>

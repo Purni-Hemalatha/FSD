@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Operations using Functions</title>
+
+    <script>
+
+        function factorial(n) {
+            var fact = 1;
+            for (var i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            document.write("<h3>Factorial: " + fact + "</h3>");
+        }
+
+        function fibonacci(n) {
+            var a = 0, b = 1, next;
+            document.write("<h3>Fibonacci Series:</h3>");
+            document.write(a + " " + b + " ");
+
+            while (true) {
+                next = a + b;
+                if (next > n)
+                    break;
+                document.write(next + " ");
+                a = b;
+                b = next;
+            }
+        }
+
+        function primeNumbers(n) {
+            document.write("<h3>Prime Numbers up to " + n + ":</h3>");
+
+            for (var i = 2; i <= n; i++) {
+                var isPrime = true;
+
+                for (var j = 2; j <= i / 2; j++) {
+                    if (i % j == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+
+                if (isPrime) {
+                    document.write(i + " ");
+                }
+            }
+        }
+
+        function palindrome(n) {
+            var original = n;
+            var reversed = 0;
+            var remainder;
+
+            while (n > 0) {
+                remainder = n % 10;
+                reversed = reversed * 10 + remainder;
+                n = parseInt(n / 10);
+            }
+
+            if (original == reversed)
+                document.write("<h3>It is a Palindrome Number</h3>");
+            else
+                document.write("<h3>It is NOT a Palindrome Number</h3>");
+        }
+
+        function mainFunction() {
+            var num = parseInt(prompt("Enter a number:"));
+
+            factorial(num);
+            fibonacci(num);
+            primeNumbers(num);
+            palindrome(num);
+        }
+
+    </script>
+</head>
+
+<body onload="mainFunction()">
+    <h2>Number Operations using Functions</h2>
+</body>
+</html>
