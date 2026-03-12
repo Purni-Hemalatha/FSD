@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Input Methods</title>
+
+    <script>
+        // 1. Using prompt()
+        function getPromptInput() {
+            var name = prompt("Enter your name:");
+            alert("Hello " + name);
+        }
+
+        // 2. Using input text field
+        function getTextInput() {
+            var value = document.getElementById("textbox").value;
+            alert("You entered: " + value);
+        }
+
+        // 3. Using form input
+        function getFormInput() {
+            var age = document.forms["myForm"]["age"].value;
+            alert("Your age is: " + age);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Different Ways to Take Input</h2>
+
+    <!-- Prompt Method -->
+    <button onclick="getPromptInput()">Input using Prompt</button>
+
+    <br><br>
+
+    <!-- Textbox Method -->
+    Enter something:
+    <input type="text" id="textbox">
+    <button onclick="getTextInput()">Submit</button>
+
+    <br><br>
+
+    <!-- Form Method -->
+    <form name="myForm">
+        Enter Age:
+        <input type="number" name="age">
+        <button type="button" onclick="getFormInput()">Submit</button>
+    </form>
+
+</body>
+</html>

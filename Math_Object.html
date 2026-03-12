@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Object Example</title>
+
+    <script>
+
+        function mathExample() {
+
+            var number = 4.7;
+            var output = "<h3>Math Object Properties & Methods</h3>";
+
+            output += "Value of PI: " + Math.PI + "<br>";
+            output += "Value of Euler's Number (E): " + Math.E + "<br><br>";
+
+            output += "Math.round(" + number + "): " + Math.round(number) + "<br>";
+            output += "Math.ceil(" + number + "): " + Math.ceil(number) + "<br>";
+            output += "Math.floor(" + number + "): " + Math.floor(number) + "<br>";
+            output += "Math.sqrt(25): " + Math.sqrt(25) + "<br>";
+            output += "Math.pow(2,3): " + Math.pow(2,3) + "<br>";
+            output += "Math.abs(-10): " + Math.abs(-10) + "<br>";
+            output += "Math.max(10,20,5): " + Math.max(10,20,5) + "<br>";
+            output += "Math.min(10,20,5): " + Math.min(10,20,5) + "<br>";
+            output += "Random Number (0-1): " + Math.random() + "<br>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+
+    </script>
+</head>
+
+<body onload="mathExample()">
+
+    <h2>Math Object Properties & Methods</h2>
+
+    <p id="result"></p>
+
+</body>
+</html>
