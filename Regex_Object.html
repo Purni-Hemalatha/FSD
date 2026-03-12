@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object Example</title>
+
+    <script>
+
+        function regexExample() {
+
+            var text = "Welcome to BTech 2nd Year 2026";
+
+            var pattern = /[0-9]+/g;   
+
+            var output = "<h3>RegExp Object Properties & Methods</h3>";
+
+            output += "Original Text: " + text + "<br><br>";
+
+            output += "Pattern Source: " + pattern.source + "<br>";
+            output += "Global Property: " + pattern.global + "<br>";
+            output += "Ignore Case: " + pattern.ignoreCase + "<br><br>";
+
+            output += "Using test(): " + pattern.test(text) + "<br>";
+            output += "Using exec(): " + pattern.exec(text) + "<br><br>";
+
+            output += "Using match(): " + text.match(pattern) + "<br>";
+            output += "Using replace(): " + text.replace(pattern, "XXXX") + "<br>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+
+    </script>
+</head>
+
+<body onload="regexExample()">
+
+    <h2>RegExp Object Properties & Methods</h2>
+
+    <p id="result"></p>
+
+</body>
+</html>

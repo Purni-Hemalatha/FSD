@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Object Example</title>
+
+    <script>
+
+        function Student(name, age, branch) {
+
+            this.name = name;
+            this.age = age;
+            this.branch = branch;
+
+            this.display = function() {
+                return "Name: " + this.name +
+                       "<br>Age: " + this.age +
+                       "<br>Branch: " + this.branch;
+            };
+        }
+
+        function objectExample() {
+
+            var student1 = new Student("Hemalatha", 19, "CIC");
+
+            Object.defineProperty(student1, "studentInfo", {
+
+                get: function() {
+                    return this.name + " - " + this.branch;
+                },
+
+                set: function(value) {
+                    this.name = value;
+                }
+            });
+
+            var output = "<h3>User Defined Object Example</h3>";
+            output += "<b>Properties:</b><br>";
+            output += "Name: " + student1.name + "<br>";
+            output += "Age: " + student1.age + "<br>";
+            output += "Branch: " + student1.branch + "<br><br>";
+            output += "<b>Method Output:</b><br>";
+            output += student1.display() + "<br><br>";
+            output += "<b>Getter Output:</b><br>";
+            output += student1.studentInfo + "<br><br>";
+            student1.studentInfo = "Purni";
+            output += "<b>After Setter (Changed Name):</b><br>";
+            output += student1.display();
+
+            document.getElementById("result").innerHTML = output;
+        }
+
+    </script>
+</head>
+
+<body onload="objectExample()">
+
+    <h2>User Defined Object Demonstration</h2>
+
+    <p id="result"></p>
+
+</body>
+</html>

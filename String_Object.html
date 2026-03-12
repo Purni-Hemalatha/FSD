@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object Example</title>
+
+    <script>
+
+        function stringExample() {
+
+            var text = "Welcome Purni.Hemalatha";
+            var output = "<h3>String Object Properties & Methods</h3>";
+            output += "Original String: " + text + "<br><br>";
+            output += "Length of String: " + text.length + "<br><br>";
+            output += "Uppercase: " + text.toUpperCase() + "<br>";
+            output += "Lowercase: " + text.toLowerCase() + "<br>";
+            output += "Character at position 3: " + text.charAt(3) + "<br>";
+            output += "Index of 'Home': " + text.indexOf("Home") + "<br>";
+            output += "Substring (0,7): " + text.substring(0,7) + "<br>";
+            output += "Replace 'Welcome' with 'Hello': " + 
+                      text.replace("Welcome","Hello") + "<br>";
+            output += "Split by space: " + text.split(" ") + "<br>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+
+    </script>
+</head>
+
+<body onload="stringExample()">
+
+    <h2>String Object Properties & Methods</h2>
+
+    <p id="result"></p>
+
+</body>
+</html>
